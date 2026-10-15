@@ -33,3 +33,21 @@ git add .
 git commit -m "Frontend dashboard musica clasica Next.js + JWT"
 gh repo create <TU-USUARIO>/dashboard-musica-frontend --public --source=. --push
 ```
+
+## Análisis de seguridad con Nuclei
+Escaneo realizado el 2026-10-14 con **Nuclei v3.11.1** (templates v10.5.0, 11,144 templates).
+El frontend (`next build` + `next start`) corrió en un contenedor dentro de la red Docker del lab
+LDAP/Keycloak, y Nuclei se ejecutó en otro contenedor conectado a esa misma red
+(`http://dashboard-frontend:3000`). También se escaneó el código fuente con los templates `file/`.
+
+Resultados completos: [`nuclei-results/`](nuclei-results/) · Triage: [`nuclei-results/RESUMEN.md`](nuclei-results/RESUMEN.md)
+
+| Severidad | Hallazgo |
+|---|---|
+| Info | Faltan 10 headers de seguridad (CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, COOP, COEP, CORP, X-Permitted-Cross-Domain-Policies) |
+| Info | Se revela la tecnología (`X-Powered-By: Next.js`) |
+| Info | Método `OPTIONS` responde con los métodos permitidos |
+| Código | `POST /api/auth/login` devuelve el `access_token` en el body, lo que lo expone a JavaScript aunque también esté en la cookie httpOnly |
+| Código | Se registran fragmentos del JWT en consola (interceptor Axios, proxy, login) |
+
+Hay falsos positivos documentados en el resumen, por ejemplo `dom-invader-xss` sobre `setTimeout` con función o `location.href` fijo.
