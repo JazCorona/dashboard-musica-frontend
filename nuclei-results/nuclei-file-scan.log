@@ -1,0 +1,52 @@
+﻿System.Management.Automation.RemoteException
+                     __     _
+   ____  __  _______/ /__  (_)
+  / __ \/ / / / ___/ / _ \/ /
+ / / / / /_/ / /__/ /  __/ /
+/_/ /_/\__,_/\___/_/\___/_/   v3.11.1
+System.Management.Automation.RemoteException
+		projectdiscovery.io
+System.Management.Automation.RemoteException
+[INF] Current nuclei version: v3.11.1 (unknown) - remove '-duc' flag to enable update checks
+[INF] Current nuclei-templates version: v10.5.0 (unknown) - remove '-duc' flag to enable update checks
+[INF] New templates added in latest release: 295
+[INF] Templates loaded for current scan: 447
+[INF] Executing 447 signed templates from projectdiscovery/nuclei-templates
+[INF] Targets loaded for current scan: 1
+[js-analyse:extracted-endpoints] [file] [info] /src/app/agregar/page.js ["'next/link'","'next/navigation'","'/items'","'/dashboard'",""/dashboard""]
+[js-analyse:extracted-endpoints] [file] [info] /src/app/api/auth/login/route.js ["'next/server'","}/realms/","}/protocol/openid-connect/token","'application/x-www-form-urlencoded'","path: '/'"]
+[js-analyse:extracted-uri] [file] [info] /src/app/api/auth/login/route.js ["http://localhost:8081';"]
+[js-analyse:extracted-token] [file] [info] /src/app/api/auth/login/route.js ["password:","token =","access_token:"]
+[js-analyse:extracted-endpoints] [file] [info] /src/app/api/auth/logout/route.js ["'next/server'"]
+[js-analyse:extracted-endpoints] [file] [info] /src/app/api/items/route.js ["'next/server'","'/api/items'","'application/json'"]
+[js-analyse:extracted-token] [file] [info] /src/app/api/items/route.js ["token ="]
+[js-analyse:extracted-token] [file] [info] /src/app/dashboard/page.js ["key="]
+[js-analyse:extracted-endpoints] [file] [info] /src/app/dashboard/page.js ["'next/link'","'next/navigation'","'/items'","'/auth/logout'","'/login'",""/agregar"","'s/f'"]
+[js-analyse:extracted-endpoints] [file] [info] /src/app/login/page.js ["'next/navigation'","'/auth/login'","'/dashboard'"]
+[js-analyse:extracted-endpoints] [file] [info] /src/app/page.js ["'next/navigation'","'/dashboard'"]
+[js-analyse:extracted-endpoints] [file] [info] /src/lib/server-auth.js ["'next/headers'","'application/json'"]
+[js-analyse:extracted-uri] [file] [info] /src/lib/server-auth.js ["http://localhost:8001';"]
+[js-analyse:extracted-token] [file] [info] /src/lib/api.js ["token ="]
+[js-analyse:extracted-endpoints] [file] [info] /src/lib/api.js ["'./store'","'/api'","'/login'"]
+[js-analyse:extracted-endpoints] [file] [info] /src/middleware.js ["'next/server'","'/agregar'","'/dashboard'","'/login'","}/realms/","}/protocol/openid-connect/certs"]
+[js-analyse:extracted-token] [file] [info] /src/middleware.js ["token ="]
+[js-analyse:extracted-uri] [file] [info] /src/middleware.js ["http://localhost:8081';"]
+[js-analyse:extracted-token] [file] [info] /src/lib/store.js ["token:"]
+[credentials-disclosure-file] [file] [unknown] /src/.git/hooks/fsmonitor-watchman.sample ["update_token ="]
+[credentials-disclosure-file] [file] [unknown] /src/app/api/auth/login/route.js ["password:","token =","access_token: token","access_token:"]
+[credentials-disclosure-file] [file] [unknown] /src/app/api/items/route.js ["token ="]
+[credentials-disclosure-file] [file] [unknown] /src/app/dashboard/page.js ["key="]
+[credentials-disclosure-file] [file] [unknown] /src/lib/api.js ["token ="]
+[credentials-disclosure-file] [file] [unknown] /src/middleware.js ["token ="]
+[credentials-disclosure-file] [file] [unknown] /src/lib/store.js ["token:"]
+[credentials-disclosure-file] [file] [unknown] /src/nuclei-results/nuclei-file-report.txt ["password:","token =","access_token:","key=","token:","update_token =",""access_token: token""]
+[credentials-disclosure-file] [file] [unknown] /src/nuclei-results/nuclei-file-scan.log ["password:","token =","access_token:","key=","token:","update_token =",""access_token: token""]
+[dom-invader-xss:sink] [file] [high] /src/app/agregar/page.js ["setTimeout"]
+[url-extension-inspector:Compressed archive file] [file] [unknown] /src/package-lock.json [".tgz""]
+[dom-invader-xss:sink] [file] [high] /src/app/api/auth/login/route.js ["fetch"]
+[dom-invader-xss:sink] [file] [high] /src/lib/server-auth.js ["fetch"]
+[dom-invader-xss:sink] [file] [high] /src/lib/api.js ["location.pathname","location.href"]
+[dom-invader-xss:source] [file] [high] /src/lib/api.js ["location.pathname","location.href"]
+[0:00:14] | Templates: 447 | Hosts: 1 | RPS: 1809 | Matched: 34 | Errors: 0 | Requests: 25624/25624 (100%)
+[INF] Scan completed in 14.161475041s. 34 matches found.
+[0:00:14] | Templates: 447 | Hosts: 1 | RPS: 1807 | Matched: 34 | Errors: 0 | Requests: 25624/25624 (100%)

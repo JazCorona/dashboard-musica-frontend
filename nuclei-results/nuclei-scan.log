@@ -1,0 +1,37 @@
+﻿System.Management.Automation.RemoteException
+                     __     _
+   ____  __  _______/ /__  (_)
+  / __ \/ / / / ___/ / _ \/ /
+ / / / / /_/ / /__/ /  __/ /
+/_/ /_/\__,_/\___/_/\___/_/   v3.11.1
+System.Management.Automation.RemoteException
+		projectdiscovery.io
+System.Management.Automation.RemoteException
+[INF] Current nuclei version: v3.11.1 (unknown) - remove '-duc' flag to enable update checks
+[INF] Current nuclei-templates version: v10.5.0 (unknown) - remove '-duc' flag to enable update checks
+[INF] New templates added in latest release: 295
+[INF] Templates loaded for current scan: 11144
+[INF] Executing 11144 signed templates from projectdiscovery/nuclei-templates
+[INF] Targets loaded for current scan: 1
+[INF] Templates clustered: 2724 (Reduced 2588 Requests)
+[INF] Using Interactsh Server: oast.pro
+[0:00:30] | Templates: 11144 | Hosts: 1 | RPS: 202 | Matched: 0 | Errors: 10 | Requests: 6120/20581 (29%)
+[0:01:00] | Templates: 11144 | Hosts: 1 | RPS: 196 | Matched: 0 | Errors: 23 | Requests: 11842/20581 (57%)
+[0:01:30] | Templates: 11144 | Hosts: 1 | RPS: 164 | Matched: 0 | Errors: 64 | Requests: 14871/20581 (72%)
+[tech-detect:next.js] [http] [info] http://dashboard-frontend:3000
+[http-missing-security-headers:x-content-type-options] [http] [info] http://dashboard-frontend:3000
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] http://dashboard-frontend:3000
+[http-missing-security-headers:content-security-policy] [http] [info] http://dashboard-frontend:3000
+[http-missing-security-headers:permissions-policy] [http] [info] http://dashboard-frontend:3000
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] http://dashboard-frontend:3000
+[http-missing-security-headers:referrer-policy] [http] [info] http://dashboard-frontend:3000
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] http://dashboard-frontend:3000
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] http://dashboard-frontend:3000
+[http-missing-security-headers:strict-transport-security] [http] [info] http://dashboard-frontend:3000
+[http-missing-security-headers:x-frame-options] [http] [info] http://dashboard-frontend:3000
+[options-method] [http] [info] http://dashboard-frontend:3000 ["GET","HEAD"]
+[0:02:00] | Templates: 11144 | Hosts: 1 | RPS: 161 | Matched: 12 | Errors: 86 | Requests: 19379/20581 (94%)
+[0:02:17] | Templates: 11144 | Hosts: 1 | RPS: 149 | Matched: 12 | Errors: 233 | Requests: 20544/20581 (99%)
+[INF] Scan completed in 2m. 12 matches found.
+[INF] HTTP connections: 14041 total, 4949 new, 9092 reused (64.8%)
+[0:02:17] | Templates: 11144 | Hosts: 1 | RPS: 149 | Matched: 12 | Errors: 233 | Requests: 20544/20581 (99%)
